@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Illegitimate Click Director v1.0 (Sup3r Pr1v@ 0day, DO NOT LEAK!)</title>
+	<style>
+	body {
+		background-color: black;
+		font-family: monospace;
+		color: green;
+	}
+	div {
+		font-size: 16px;
+	}
+	</style>
+	<script>
+	messages = [
+		"Evading next-gen AV firewall",
+		"Callibrating flux capacitor",
+		"Executing backdoor payload on low-orbit-ion-cannon",
+		"Calculating heap base address",
+		"git-cloning tracer-tee source codez",
+		"Building GUI interface in visual basic to track IP address",
+		"Whistling into ICBM modem @ 2600Hz",
+		"Bypassing SMECK/SMACK",
+		"Installing Backtrack 3 on /dev/sda1",
+		"Initializing 1337 processes on all CPU corez",
+		"Grooming the heap",
+		"Double-ROT-13 encoding payload",
+		"Base64 encrypting the connection",
+		"Popping calc.exe on DISPLAY :0",
+	];
+	function writeMessage(m) {
+		var i = 0, interval;
+		var b = document.getElementById("h4ckb0x");
+		b.innerHTML += "<br>";
+		interval = window.setInterval( function() {
+			b.innerHTML += m.charAt(i++);
+			if (i > m.length)
+				window.clearInterval(interval);
+		}, 10);
+	}
+	function h4ck() {
+		var d = 0;
+		for (var t = 0; t < 8; t++) {
+			m = messages[ Math.floor(Math.random() * 100) % messages.length ];
+			m += "................ DONE!";
+			setTimeout("writeMessage('" + m + "');", d);
+			d = d + (m.length * 10) + 10;
+		}
+		setTimeout("w1n();", d);
+	}
+	function w1n() {
+		mlg = document.createElement("iframe");
+		mlg.setAttribute("style", "opacity: 0; position: absolute; top: 0px; left: 0px; width: 1; height: 1;");
+		mlg.setAttribute("scrolling", "no");
+		mlg.setAttribute("frameborder", "no");
+		mlg.setAttribute("src", "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/257169807&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"); 
+		mlg.setAttribute("allow", "autoplay");
+		document.body.appendChild(mlg);
+		gif = document.createElement("img");
+		gif.setAttribute("src", "https://i.imgur.com/iVHfwLc.gif");
+		gif.setAttribute("style", "position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;");
+		document.body.appendChild(gif);
+		target = document.createElement("iframe");
+		target.setAttribute("src", document.getElementById("target").value);
+		target.setAttribute("style", "width: 400px; height: 400px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);");
+		document.body.appendChild(target);
+		text = document.createElement("div");
+		text.innerHTML = "<b>CLICK CLICK CLICK<br><br>CLICK CLICK CLICK<br><br>CLICK CLICK CLICK</b>";
+		text.setAttribute("id", "text");
+		text.setAttribute("style", "position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); zindex: -1; font-size: 32px; padding: 10px;");
+		document.body.appendChild(text);
+		setInterval("blink();", 100);
+	}
+	function blink() {
+		text = document.getElementById("text");
+		text.style.color = "#"+((1<<24)*Math.random()|0).toString(16)
+		text.style.display = (text.style.display == "none" ? "" : "none");
+	}
+	</script>
+	<link rel="preload" href="https://i.imgur.com/iVHfwLc.gif" as="image">
+</head>
+<body>
+	<h1>Illegitimate Click Director v1.0</h1>
+	<h4><i>(Sup3r Pr1v@ 0day, DO NOT LEAK!)</i></h4>
+	<hr>
+	# This code exploits a recently discovered CFAA violation allowing "illegitimate clicks" <br>
+	# to be "directed at a website", thus h4ck1ng th3 pl4n3t. <br>
+	# Source: <a href="https://twitter.com/jkosseff/status/1275449897546731527">https://twitter.com/jkosseff/status/1275449897546731527</a> <br>
+	# <br>
+	# Tracked as: CVE-420-1337 <br>
+	# <br>
+	# FOR EDUCATIONAL PURPOSES ONLY. USE AT YOUR OWN RISK. <br>
+	# Greetz to all the hackers. <br>
+	<hr>
+	<form action="#" onsubmit="h4ck(); return false;">
+		<strong>Click target:</strong> <input required="true" id="target" placeholder="example: http://cia.gov/" /> <input type="submit" value="Direct illegitimate clicks" />
+	</form>
+	<div id="h4ckb0x">
+	</div>
+</body>
+</html>
